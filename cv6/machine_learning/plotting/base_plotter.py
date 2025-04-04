@@ -14,10 +14,24 @@ class BasePlotter:
         - args: Positional arguments for the plotting function.
         - kwargs: Keyword arguments for the plotting function.
         """
-        general_kwargs = {key: kwargs.pop(key, None) for key in ['title', 'xlabel', 'ylabel', 'xticks_rotation', 'yticks', 'yticklabels', 'xticks']}
+        savefig_name = kwargs.pop('savefig_name', None)
+        general_kwargs = {key: kwargs.pop(key, None) for key in
+                          ['title', 'xlabel', 'ylabel', 'xticks_rotation', 'yticks', 'yticklabels', 'xticks']}
         plt.figure(figsize=kwargs.pop('figsize', (10, 6)))
         plot_func(*args, **kwargs)
         self.__apply_plot_labels(general_kwargs)
+
+        import os
+        os.makedirs("outputs", exist_ok=True)
+
+        if savefig_name is None and general_kwargs['title']:
+            savefig_name = general_kwargs['title'].replace(' ', '_').lower()
+        elif savefig_name is None:
+            import time
+            savefig_name = f"plot_{int(time.time())}"
+
+        plt.savefig(f"outputs/{savefig_name}.png", dpi=300)
+
         plt.tight_layout()
         plt.show()
 
