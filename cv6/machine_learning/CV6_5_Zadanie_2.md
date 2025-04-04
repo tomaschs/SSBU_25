@@ -36,7 +36,16 @@ Do implementácie pridajte ukladanie všetkých grafov, ktoré sa vytvárajú pr
 
 **V skripte `main.py`** nastavte počet replikácií na vyššie číslo (rozumne, podľa vlastného uváženia). Vykonajte beh aplikácie s Vašou implementáciou. Po skončení behu zanalyzujte vygenerované grafy a pár vetami popíšte ich interpretáciu. (Napr. v čom je ktorý ML model lepší, a pod.)
 
-#TODO - Interpretácia
+navysil som pocet replikacii na 25 zo zakladnych 10.
+
+Grafy Acuracy a Precision per replication ukazuje ze Random Forest model a Logistic Regression model su na tom skoro podobne s rozdielom 0,01
+
+Pri grafoch Density Plot je Logistic regresion na tom lepsie ako Random Forest model najviac pri Accuracy metrik.
+S nastavenim vhodnejsich parametrov by sa mozno dalo docielit lepsich vysledkov pre Random Forest model.
+
+Pri grafoch Average Confusion Matrix je vidiet ze Random Forest model ma skoro 2 krat viac False Positives ako Logistic Regression model, co by dokazovalo ze Random Forest model bol menej presny ako Logistic Regression model pre toto pouzitie.
+
+
 
 **Odovzdávanie riešenia:** Ako súčasť riešenia zahrňte okrem odpovedí na otázky aj skripty s Vašou implementáciou, vygenerované logy a grafy (všetko môžete dať na Github).
 
