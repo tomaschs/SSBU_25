@@ -28,9 +28,9 @@ Použite ľubovoľné štatistické metódy na analýzu datasetu (napr. t-test, 
 
 (Napr. Pri použití pearsonovho korelačného koeficientu je najvyššia pozitívna korelácia medzi premennými x a y, a koeficient korelácie je 0.992.)
 1: K-means clustering: 2 kontrolny boli zaradeny do skupiny pacientov a 5 pacientov do skupiny kontrolnych
-2: Pearson correlation: medzi hodnotami row(Bin.9.38) a Col(Bin.6.78) je korelácia 0.877
+2: Pearson correlation: medzi hodnotami row(Bin.6,74) a Col(Bin.0.66) je korelácia 0.946
 3: Random Forest: OOB chyba 0,08. Kontrolnych správne klasifikoval, 21 pacientov správne klasifikoval, 4 nesprávne, s chybou triedy 0,16
-4: SVM: najmenšia chybovosť pri 200 premenných 4% a najväčšiu chybovosť dosahuje pri 6 premenných 10%
+4: SVM: najmenšia chybovosť pri 200 premenných 2,8% a najväčšiu chybovosť dosahuje pri 6 premenných 10%
 
 Vygenerujte report z vykonanej analýzy a celý výsledný zip file odovzdajte ako prílohu k riešeniu zadania.
 
