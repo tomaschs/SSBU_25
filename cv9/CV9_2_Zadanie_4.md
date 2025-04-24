@@ -17,9 +17,9 @@ Normalizujte distribúciu datasetu (pre premenné aj vzorku).
 (Vyberte akúkoľvek kombináciu operácií, ktorá je podľa Vás najlepšia).
 
 **Ktoré operácie ste pri normalizácii použili?**
-Sample normalization: # TODO
-Data Transformation:  # TODO
-Data Scaling:         # TODO
+Sample normalization:  Normalization by sum
+Data Transformation:  Log transformation (base 10)
+Data Scaling:         Pareto scaling
 ### Úloha 2 (4b)
 
 Použite ľubovoľné štatistické metódy na analýzu datasetu (napr. t-test, correlations, PCA, PLS-DA, Dendrogram, Heatmap, K-means, RandomForest, ..) 
@@ -27,10 +27,10 @@ Použite ľubovoľné štatistické metódy na analýzu datasetu (napr. t-test, 
 **Uveďte aspoň 4 skutočnosti (z 4 rôznych metód), ktoré ste zistili analýzou datasetu:**
 
 (Napr. Pri použití pearsonovho korelačného koeficientu je najvyššia pozitívna korelácia medzi premennými x a y, a koeficient korelácie je 0.992.)
-1: # TODO
-2: # TODO
-3: # TODO
-4: # TODO
+1: K-means clustering: 2 kontrolny boli zaradeny do skupiny pacientov a 5 pacientov do skupiny kontrolnych
+2: Pearson correlation: medzi hodnotami row(Bin.9.38) a Col(Bin.6.78) je korelácia 0.877
+3: Random Forest: OOB chyba 0,08. Kontrolnych správne klasifikoval, 21 pacientov správne klasifikoval, 4 nesprávne, s chybou triedy 0,16
+4: SVM: najmenšia chybovosť pri 200 premenných 4% a najväčšiu chybovosť dosahuje pri 6 premenných 10%
 
 Vygenerujte report z vykonanej analýzy a celý výsledný zip file odovzdajte ako prílohu k riešeniu zadania.
 
